@@ -1,0 +1,36 @@
+{
+  "name": "next",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "lint": "next lint",
+    "ngrok:listen": "ngrok http 3000",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/stripe/webhook"
+  },
+  "dependencies": {
+    "@geist-ui/react": "^2.2.0",
+    "@geist-ui/react-icons": "^1.0.1",
+    "@stripe/stripe-js": "^1.20.3",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "axios": "^0.24.0",
+    "next": "^12.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.18.0",
+    "stripe": "^8.186.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.33",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.1",
+    "ngrok": "^4.2.2",
+    "postcss": "^8.2.15",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.18",
+    "typescript": "^4.4.4"
+  }
+}
