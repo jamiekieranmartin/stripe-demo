@@ -11,26 +11,14 @@ export const stripe = new Stripe(process.env.STRIPE_SEC!, {
   },
 })
 
-/**
- *
- */
 export const getProducts = async () => (await stripe.products.list()).data
 
-/**
- *
- */
 export const getProduct = async (id: string) =>
   await stripe.products.retrieve(id)
 
-/**
- *
- */
 export const getPrices = async ({ id }: Stripe.Product) =>
   (await stripe.prices.list({ product: id })).data
 
-/**
- *
- */
 export const mapPricesToProduct = async (product: Stripe.Product) => {
   const prices = await getPrices(product)
 
@@ -40,9 +28,6 @@ export const mapPricesToProduct = async (product: Stripe.Product) => {
   }
 }
 
-/**
- *
- */
 export const getProductWithPrices = async () => {
   const products = await getProducts()
 
